@@ -12,6 +12,7 @@ const (
 	WaveSqr                      //3
 )
 
+//
 const (
 	TwoPi = float64(2 * math.Pi)
 )
