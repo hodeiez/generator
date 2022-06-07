@@ -1,6 +1,9 @@
 package generator
 
-import "math"
+import (
+	"math"
+	"math/rand"
+)
 
 // WaveType is an alias type for the type of waveforms that can be generated
 type WaveType uint16
@@ -10,6 +13,7 @@ const (
 	WaveTriangle                 // 1
 	WaveSaw                      // 2
 	WaveSqr                      //3
+	WaveNoise                    //4
 )
 
 //
@@ -23,6 +27,10 @@ const (
 	Q     = 0.775
 	SineP = 0.225
 )
+
+func Noise(x float64) float64 {
+	return float64(TringleA*x) - rand.Float64()
+}
 
 // Sine takes an input value from -Pi to Pi
 // and returns a value between -1 and 1

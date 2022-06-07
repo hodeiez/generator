@@ -115,6 +115,8 @@ func (o *Osc) Sample() (output float64) {
 		output = amp*Sawtooth(o.CurrentPhaseAngle) + o.DcOffset
 	case WaveSqr:
 		output = amp*Square(o.CurrentPhaseAngle) + o.DcOffset
+	case WaveNoise:
+		output = amp*Noise(o.CurrentPhaseAngle) + o.DcOffset
 	}
 
 	o.CurrentPhaseAngle += o.phaseAngleIncr
