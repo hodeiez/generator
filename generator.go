@@ -29,7 +29,7 @@ const (
 )
 
 func Noise(x float64) float64 {
-	return float64(TringleA*x) - rand.Float64()
+	return (rand.Float64() * -2) + 1
 }
 
 // Sine takes an input value from -Pi to Pi
