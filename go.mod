@@ -1,4 +1,4 @@
-module github.com/go-audio/generator
+module github.com/hodeiez/generator
 
 go 1.12
 
